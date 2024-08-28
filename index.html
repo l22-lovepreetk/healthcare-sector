@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-Learning Platform</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: Arial, sans-serif;
+        }
+        header, footer {
+            background-color: #343a40;
+        }
+        .navbar {
+            background-color: #007bff;
+        }
+        .navbar-nav .nav-link {
+            color: white;
+        }
+        .navbar-nav .nav-link:hover {
+            color: #d1ecf1;
+        }
+        .card {
+            margin-top: 50px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        .nav-item {
+            margin-left: 10px;
+        }
+        .content-section {
+            margin-top: 20px;
+        }
+        .hidden {
+            display: none;
+        }
+        .module-card {
+            margin-bottom: 20px;
+        }
+        .content-section {
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body>
+    <header class="bg-dark text-white text-center py-3">
+        <h1>E-Learning Platform</h1>
+    </header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container">
+            <a class="navbar-brand text-white" href="#">E-Learning</a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="loginLink">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="registerLink">Register</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="modules.html" id="modulesLink">Modules</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="resources.html" id="resourcesLink">Resources</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" id="forumLink">Forum</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container my-5">
+        <div id="loginSection" class="content-section">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header bg-primary text-white">
+                            <h2>Login</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="loginForm">
+                                <div class="form-group">
+                                    <label for="email">Email:</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password">Password:</label>
+                                    <input type="password" class="form-control" id="password" required>
+                                </div>
+                                <button type="submit" class="btn btn-primary">Login</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="registerSection" class="content-section hidden">
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <h2>Register</h2>
+                        </div>
+                        <div class="card-body">
+                            <form id="registerForm">
+                                <div class="form-group">
+                                    <label for="regEmail">Email:</label>
+                                    <input type="email" class="form-control" id="regEmail" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="regPassword">Password:</label>
+                                    <input type="password" class="form-control" id="regPassword" required>
+                                </div>
+                                <button type="submit" class="btn btn-success">Register</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="modulesSection" class="content-section hidden">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Available Modules</h2>
+                    <div class="row">
+                        <div class="col-md-4 module-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Module 1: Introduction to Healthcare</h5>
+                                    <p class="card-text">An overview of the healthcare industry and its importance.</p>
+                                    <a href="module.html" class="btn btn-primary">Start Module</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 module-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Module 2: E-Learning Benefits</h5>
+                                    <p class="card-text">Understanding the benefits of e-learning in healthcare.</p>
+                                    <a href="module.html" class="btn btn-primary">Start Module</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 module-card">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h5 class="card-title">Module 3: Using E-Learning Platforms</h5>
+                                    <p class="card-text">How to effectively use e-learning platforms.</p>
+                                    <a href="module.html" class="btn btn-primary">Start Module</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="resourcesSection" class="content-section hidden">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Resources</h2>
+                    <ul>
+                        <li><a href="#">Resource 1: E-Learning Best Practices</a></li>
+                        <li><a href="#">Resource 2: Healthcare Training Materials</a></li>
+                        <li><a href="#">Resource 3: Interactive Learning Tools</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="forumSection" class="content-section hidden">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2>Discussion Forum</h2>
+                    <p>Join the conversation and discuss various topics related to healthcare and e-learning.</p>
+                    <textarea class="form-control mb-3" rows="3" placeholder="Enter your message"></textarea>
+                    <button class="btn btn-primary">Post Message</button>
+                    <div id="forumMessages" class="mt-3">
+                        <p><strong>John Doe:</strong> This platform is very helpful!</p>
+                        <p><strong>Jane Smith:</strong> I love the interactive modules.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer class="bg-dark text-white text-center py-3">
+        &copy; 2024 E-Learning Platform
+    </footer>
+    <script>
+        document.getElementById('loginLink').addEventListener('click', function() {
+            showSection('loginSection');
+        });
+        document.getElementById('registerLink').addEventListener('click', function() {
+            showSection('registerSection');
+        });
+        document.getElementById('modulesLink').addEventListener('click', function() {
+            showSection('modulesSection');
+        });
+        document.getElementById('resourcesLink').addEventListener('click', function() {
+            showSection('resourcesSection');
+        });
+        document.getElementById('forumLink').addEventListener('click', function() {
+            showSection('forumSection');
+        });
+
+        const users = [
+            { email: 'test@example.com', password: 'password' },
+            { email: 'user2@example.com', password: 'pass1234' }
+        ];
+
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            const user = users.find(user => user.email === email && user.password === password);
+
+            if (user) {
+                alert('Login successful!');
+                showSection('modulesSection');
+            } else {
+                alert('Login failed. Please check your credentials.');
+            }
+        });
+
+        document.getElementById('registerForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const regEmail = document.getElementById('regEmail').value;
+            const regPassword = document.getElementById('regPassword').value;
+
+            users.push({ email: regEmail, password: regPassword });
+            alert('Registration successful! You can now log in.');
+            showSection('loginSection');
+        });
+
+        function showSection(sectionId) {
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => {
+                section.classList.add('hidden');
+            });
+            document.getElementById(sectionId).classList.remove('hidden');
+        }
+    </script>
+</body>
+</html>
